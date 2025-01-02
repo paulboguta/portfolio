@@ -9,6 +9,9 @@ export const METADATA: Metadata = {
   },
 };
 
+export const APP_LINK = "https://pawelboguta.com";
+export const APP_DOMAIN = "pawelboguta.com";
+
 export const VERSION = "0.1";
 
 export const PROJECTS = [
