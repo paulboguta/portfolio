@@ -51,24 +51,28 @@ export default function Page() {
             {PROJECTS.map((project) => (
               <Link
                 key={project.title}
-                href={project.href}
-                target="_blank"
+                href={project.soon ? "#" : project.href}
+                target={project.soon ? undefined : "_blank"}
                 rel="noopener"
                 className="group block space-y-2  hover:bg-gray-50 p-4 rounded"
               >
-                <h3 className="text-lg font-medium group-hover:text-primary group-focus-visible:text-primary">
+                <h3 className="text-lg font-medium group-hover:text-primary group-focus-visible:text-primary flex items-center gap-2">
                   {project.title}
+                  {project.soon && (
+                    <span className="flex items-center gap-1.5 bg-cyan-50 px-2 py-0.5 rounded text-xs text-cyan-700 font-normal">
+                      <div className="relative flex h-2 w-2">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75"></span>
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
+                      </div>
+                      Soon
+                    </span>
+                  )}
                 </h3>
                 <p className="text-muted-foreground">{project.description}</p>
               </Link>
             ))}
           </div>
         </section>
-
-        {/* IN 0.2 */}
-        {/* <section className="space-y-4">
-          <h2 className="text-xl font-medium pl-4">Playground</h2>
-        </section> */}
 
         <section className="space-y-4">
           <div className="flex items-center justify-center gap-1.5 pt-8">

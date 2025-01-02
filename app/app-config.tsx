@@ -1,4 +1,4 @@
-import { Github, Myno, Twitter } from "@/components/icons";
+import { Github, Twitter } from "@/components/icons";
 import { Metadata } from "next";
 
 export const METADATA: Metadata = {
@@ -9,16 +9,21 @@ export const METADATA: Metadata = {
   },
 };
 
-export const APP_LINK = "https://pawelboguta.com";
+export const APP_LINK =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://pawelboguta.com";
+
 export const APP_DOMAIN = "pawelboguta.com";
 
-export const VERSION = "0.1";
+export const VERSION = "0.2";
 
 export const PROJECTS = [
   {
     title: "uikits",
     description: "TailwindCSS components based on shadcn/ui.",
     href: "https://uikits.io",
+    soon: true,
   },
   {
     title: "Herrro",
@@ -33,12 +38,12 @@ export const PROJECTS = [
 ];
 
 export const SOCIALS = [
-  {
-    platform: "Work",
-    handle: "Myno Studio",
-    href: "https://myno.studio",
-    icon: Myno,
-  },
+  // {
+  //   platform: "Work",
+  //   handle: "Myno Studio",
+  //   href: "https://myno.studio",
+  //   icon: Myno,
+  // },
   {
     platform: "Twitter",
     handle: "@pawelboguta",
