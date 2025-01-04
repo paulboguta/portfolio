@@ -12,7 +12,6 @@ export const ScrambleAnimation = ({
   delay = 0,
 }: BaseTextAnimationProps) => {
   const [displayText, setDisplayText] = useState("");
-  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -20,7 +19,6 @@ export const ScrambleAnimation = ({
     const resolvedChars = new Set<number>();
 
     const startAnimation = () => {
-      setIsAnimating(true);
       interval = setInterval(() => {
         frame++;
 
@@ -50,7 +48,6 @@ export const ScrambleAnimation = ({
         // Stop when all characters are resolved
         if (resolvedChars.size === text.replace(/ /g, "").length) {
           clearInterval(interval);
-          setIsAnimating(false);
         }
       }, speed);
     };
