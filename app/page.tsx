@@ -75,6 +75,28 @@ export default function Page() {
         </section>
 
         <section className="space-y-4">
+          <h2 className="text-xl font-medium pl-4">Playground</h2>
+          <Link
+            href="/playground"
+            className="group block space-y-2 hover:bg-gray-50 p-4 rounded"
+          >
+            <h3 className="text-lg font-medium group-hover:text-primary group-focus-visible:text-primary flex items-center gap-2">
+              Interactive Demos
+              <span className="flex items-center gap-1.5 bg-green-50 px-2 py-0.5 rounded text-xs text-green-700 font-normal">
+                <div className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                </div>
+                New
+              </span>
+            </h3>
+            <p className="text-muted-foreground">
+              Collection of interactive UI components and animations
+            </p>
+          </Link>
+        </section>
+
+        <section className="space-y-4">
           <div className="flex items-center justify-center gap-1.5 pt-8">
             <div className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
