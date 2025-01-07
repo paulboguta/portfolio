@@ -33,7 +33,7 @@ const DEMO_LOGOS = [
 
 export default function LogoCarouselPlayground() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-[90vh] bg-background">
       <div className="mx-auto max-w-2xl space-y-8 px-4 py-12 md:py-16 lg:py-24">
         <div className="space-y-2">
           <Link
