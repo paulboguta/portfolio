@@ -1,8 +1,7 @@
-"use client";
-
 import { APP_LINK } from "@/app/app-config";
 import Dock from "@/components/dock";
 import { FlickeringGrid } from "@/components/flickering-grid";
+import { LogoCarousel } from "@/components/logo-carousel";
 import { TextAnimation } from "@/components/text-animations";
 import { cn } from "@/lib/utils";
 import { ArrowRight, BookOpenIcon, BrainCircuitIcon } from "lucide-react";
@@ -107,6 +106,33 @@ const DEMOS = [
               href: "#",
             },
           ]}
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Logo Carousel",
+    description: "Vertical logo carousel animation",
+    href: "/playground/logo-carousel",
+    preview: (
+      <div className="flex items-center justify-center h-full">
+        <LogoCarousel
+          logos={[
+            {
+              src: "/logo-carousel/vercel.svg",
+              alt: "Vercel",
+            },
+            {
+              src: "/logo-carousel/notion.svg",
+              alt: "Notion",
+            },
+            {
+              src: "/logo-carousel/linear.svg",
+              alt: "Linear",
+            },
+          ]}
+          speed={2000}
+          logoSize={140}
         />
       </div>
     ),
