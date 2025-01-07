@@ -1,4 +1,7 @@
+"use client";
 import { APP_LINK } from "@/app/app-config";
+import { AnimatedSelect } from "@/components/animated-select";
+
 import Dock from "@/components/dock";
 import { FlickeringGrid } from "@/components/flickering-grid";
 import { LogoCarousel } from "@/components/logo-carousel";
@@ -20,6 +23,16 @@ const DEMOS = [
           className="font-bold"
           fontSize={24}
         />
+      </div>
+    ),
+  },
+  {
+    title: "Animated Select",
+    description: "Fluid select with spring animations",
+    href: "/playground/animated-select",
+    preview: (
+      <div className="flex items-center justify-center h-full ml-[340px] ">
+        <AnimatedSelect />
       </div>
     ),
   },
@@ -142,7 +155,7 @@ const DEMOS = [
 export default function PlaygroundPage() {
   return (
     <main className="min-h-screen bg-background">
-      <div className="mx-auto max-w-5xl space-y-8 px-4 py-12 md:py-16 lg:py-24">
+      <div className="mx-auto max-w-2xl space-y-8 px-4 py-12 md:py-16 lg:py-24">
         <div className="space-y-2">
           <Link
             href={APP_LINK}
@@ -159,7 +172,7 @@ export default function PlaygroundPage() {
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
           {DEMOS.map((demo) => (
             <Link
               key={demo.title}
