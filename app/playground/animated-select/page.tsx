@@ -20,7 +20,7 @@ export default function AnimatedSelectPlayground() {
             ← Back
           </Link>
           <h1 className="text-2xl font-semibold tracking-tight">
-            Animated Dropdown
+            Animated Select
           </h1>
           <p className="text-sm text-muted-foreground">
             Try to assign members to the first task.
