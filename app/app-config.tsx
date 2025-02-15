@@ -19,11 +19,16 @@ export const APP_DOMAIN = "pawelboguta.com";
 export const VERSION = "0.2";
 
 export const PROJECTS = [
+  // {
+  //   title: "uikits",
+  //   description: "TailwindCSS components based on shadcn/ui.",
+  //   href: "https://uikits.io",
+  //   soon: true,
+  // },
   {
-    title: "uikits",
-    description: "TailwindCSS components based on shadcn/ui.",
-    href: "https://uikits.io",
-    soon: true,
+    title: "Brilliant Paris",
+    description: "Directory of best restaurants, hotels and places in Paris.",
+    href: "https://brilliantparis.com",
   },
   {
     title: "Herrro",
