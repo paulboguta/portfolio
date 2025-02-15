@@ -18,7 +18,12 @@ export const APP_DOMAIN = "pawelboguta.com";
 
 export const VERSION = "0.2";
 
-export const PROJECTS = [
+export const PROJECTS: {
+  title: string;
+  description: string;
+  href: string;
+  soon?: boolean;
+}[] = [
   // {
   //   title: "uikits",
   //   description: "TailwindCSS components based on shadcn/ui.",
