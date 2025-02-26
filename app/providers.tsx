@@ -4,13 +4,16 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   // ignore analytics during dev
   if (process.env.NODE_ENV === "production") {
     return (
-      <OpenPanelComponent
-        apiUrl="/api/op"
-        clientId={process.env.OPEN_PANEL_CLIENT_ID!}
-        trackScreenViews={true}
-        trackAttributes={true}
-        trackOutgoingLinks={true}
-      />
+      <>
+        <OpenPanelComponent
+          apiUrl="/api/op"
+          clientId={process.env.OPEN_PANEL_CLIENT_ID!}
+          trackScreenViews={true}
+          trackAttributes={true}
+          trackOutgoingLinks={true}
+        />
+        {children}
+      </>
     );
   }
 
