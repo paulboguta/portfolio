@@ -1,7 +1,9 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
+import { HirePricing } from "@/components/hire-pricing";
 import { Github } from "@/components/icons";
+import { ProjectLink } from "@/components/project-link";
 import { Button } from "@/components/ui/button";
 import { PROJECTS, SOCIALS, VERSION } from "./app-config";
 
@@ -12,7 +14,7 @@ export default function Page() {
         <div className="space-y-6 pl-4">
           <div>
             <h1 className="text-2xl font-semibold">Pawel Boguta</h1>
-            <p className="text-muted-foreground">Design Engineer</p>
+            <p className="text-muted-foreground">Fullstack Developer</p>
           </div>
         </div>
 
@@ -40,8 +42,8 @@ export default function Page() {
 
         <section className="pl-4">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            I am a design engineer and founder of Myno Studio. I want to make
-            developers and designers life easier ◡̈
+            I am a fullstack developer and founder of Codetive. I help founders
+            launch great products fast. Indiehacking on weekends ◡̈
           </p>
         </section>
 
@@ -66,31 +68,21 @@ export default function Page() {
           </Link>
         </section>
 
+        <section className="space-y-4 pl-4">
+          <HirePricing />
+        </section>
+
         <section className="space-y-4">
           <h2 className="text-xl font-medium pl-4">Projects</h2>
           <div className="space-y-2">
             {PROJECTS.map((project) => (
-              <Link
+              <ProjectLink
                 key={project.title}
-                href={project.soon ? "#" : project.href}
-                target={project.soon ? undefined : "_blank"}
-                rel="noopener"
-                className="group block space-y-2  hover:bg-gray-50 p-4 rounded"
-              >
-                <h3 className="text-lg font-medium group-hover:text-primary group-focus-visible:text-primary flex items-center gap-2">
-                  {project.title}
-                  {project.soon && (
-                    <span className="flex items-center gap-1.5 bg-cyan-50 px-2 py-0.5 rounded text-xs text-cyan-700 font-normal">
-                      <div className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75"></span>
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
-                      </div>
-                      Soon
-                    </span>
-                  )}
-                </h3>
-                <p className="text-muted-foreground">{project.description}</p>
-              </Link>
+                title={project.title}
+                description={project.description}
+                href={project.href}
+                soon={project.soon}
+              />
             ))}
           </div>
         </section>

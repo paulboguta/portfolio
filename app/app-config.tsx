@@ -18,18 +18,21 @@ export const APP_DOMAIN = "pawelboguta.com";
 
 export const VERSION = "0.2";
 
+export const CALL_LINK = "https://cal.com/codetive/30min";
+
 export const PROJECTS: {
   title: string;
   description: string;
   href: string;
   soon?: boolean;
 }[] = [
-  // {
-  //   title: "uikits",
-  //   description: "TailwindCSS components based on shadcn/ui.",
-  //   href: "https://uikits.io",
-  //   soon: true,
-  // },
+  {
+    title: "Alternative OSS",
+    description:
+      "Curated directory of open source alternatives to popular tools.",
+    href: "https://alternativeoss.com",
+    // soon: true,
+  },
   {
     title: "Brilliant Paris",
     description: "Directory of best restaurants, hotels and places in Paris.",
